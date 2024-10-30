@@ -1,0 +1,158 @@
+:root {
+  --max-width: 800px;
+  --border-radius: 8px;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  --foreground-rgb: 51, 51, 51;
+  --background-rgb: 240, 248, 255;
+  --primary-color: #1e90ff;
+  --primary-hover: #187bcd;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.title {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  resize: none;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.response {
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.output {
+  margin-top: 30px;
+}
+
+.output h2 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+  
+  .textarea {
+    height: 120px;
+  }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+.reportesContainer {
+  position: relative;
+  display: inline-block; /* Permite que el contenedor se ajuste al botón */
+  margin-left: 10px; /* Espaciado entre botones */
+}
+
+.reportOptions {
+  position: absolute;
+  top: 100%; /* Coloca las opciones debajo del botón */
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  padding: 5px; /* Espaciado interno */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+}
+
+.reportButton {
+  padding: 8px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.3s;
+}
+
+.reportButton:hover {
+  background-color: #f0f0f0; /* Color al pasar el mouse */
+}

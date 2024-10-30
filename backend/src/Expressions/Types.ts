@@ -1,0 +1,1 @@
+export type Type = 'INT' | 'DOUBLE' | 'BOOL' | 'CHAR' | 'STRING' | 'NULL';
