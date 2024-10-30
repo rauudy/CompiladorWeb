@@ -1,4 +1,4 @@
-# OLC1_Proyecto2_201901973
+# Compilador Web - 201901973
 
 
 Este es un compilador robusto que implementa un lenguaje de programación fuertemente tipado con características modernas y manejo integral de errores. El compilador incluye análisis léxico, análisis sintáctico y soporta una amplia gama de construcciones de programación.
